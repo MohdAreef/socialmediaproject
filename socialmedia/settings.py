@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vs&ms7kp-z4nvovl7k7p1dkkq6v#282=(!b6#p7+**a58%&(7='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
@@ -88,26 +88,26 @@ WSGI_APPLICATION = 'socialmedia.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 
 # import os
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'FC2AdE*E4faeBG6-eeg1eA4ED*CgAbdE',
-        'HOST': 'monorail.proxy.rlwy.net',
-        'PORT': '47334',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'FC2AdE*E4faeBG6-eeg1eA4ED*CgAbdE',
+#         'HOST': 'monorail.proxy.rlwy.net',
+#         'PORT': '47334',
+#     }
+# }
 
 
 # Password validation

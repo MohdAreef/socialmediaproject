@@ -25,8 +25,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('home',views.home),   
-    path('', views.home, name='home'), 
+    path('home',views.home),   
+    # path('', views.home, name='home'), 
     path('show1',views.show1),
     path('show2',views.show2),
     path('show3',views.show3),
@@ -41,9 +41,9 @@ urlpatterns = [
 ]
 
 # new added
-# if settings.DEBUG:
-#     urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+# urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
